@@ -2,9 +2,7 @@ package ch06_project_01.ems;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import ch06_project_01.ems.configuration.MemberConfig1;
-import ch06_project_01.ems.configuration.MemberConfig2;
-import ch06_project_01.ems.configuration.MemberConfig3;
+import ch06_project_01.ems.configuration.MemberConfigImport;
 import ch06_project_01.ems.member.Student;
 import ch06_project_01.ems.member.service.EMSInformationService;
 import ch06_project_01.ems.member.service.PrintStudentInformationService;
@@ -19,7 +17,7 @@ public class MainClassUseConfigs {
 	public static void main(String[] args) {
 		
 		AnnotationConfigApplicationContext ctx = 
-				new AnnotationConfigApplicationContext(MemberConfig1.class, MemberConfig2.class, MemberConfig3.class);
+				new AnnotationConfigApplicationContext(MemberConfigImport.class);
 
 		// 샘플 데이터
 		InitSampleData initSampleData = ctx.getBean("initSampleData", InitSampleData.class);
