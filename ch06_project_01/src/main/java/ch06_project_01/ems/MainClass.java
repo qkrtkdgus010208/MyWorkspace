@@ -14,16 +14,6 @@ import ch06_project_01.ems.utils.InitSampleData;
 public class MainClass {
 
 	public static void main(String[] args) {
-		/*
-		 * IoC 컨테이너 생성
-		 */
-		
-		/*
-		String[] appCtx = {"classpath:appCtx1.xml", "classpath:appCtx2.xml", "classpath:appCtx3.xml"};
-		
-		GenericXmlApplicationContext ctx = 
-				new GenericXmlApplicationContext(appCtx);
-		*/
 		
 		GenericXmlApplicationContext ctx = 
 				new GenericXmlApplicationContext("classpath:appCtxImport.xml");
