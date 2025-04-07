@@ -14,6 +14,13 @@ local.properties
 .loadpath
 .recommenders
 
+# Java 
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
 # External tool builders
 .externalToolBuilders/
 
