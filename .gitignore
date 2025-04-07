@@ -10,8 +10,6 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.classpath
-.project
 .settings/
 .loadpath
 .recommenders
@@ -22,9 +20,6 @@ local.properties
 *.war
 *.ear
 *.log
-
-# Maven
-target/
 
 # External tool builders
 .externalToolBuilders/
