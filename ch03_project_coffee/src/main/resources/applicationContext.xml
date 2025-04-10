@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    						http://www.springframework.org/schema/beans/spring-beans.xsd
+    						http://www.springframework.org/schema/context
+    						http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:annotation-config />
+	
     <bean id="americano" class="ch03_project_coffee.Americano" />
     <bean id="Latte" class="ch03_project_coffee.Latte" />
 
-    <bean id="person1" class="ch03_project_coffee.Person">
+    <!-- <bean id="person1" class="ch03_project_coffee.Person">
         <constructor-arg ref="americano" />
-    </bean>
+        <property name="age" value="25" />
+    </bean> -->
+	<bean id="person1" class="ch03_project_coffee.Person" />
 
     <bean id="person2" class="ch03_project_coffee.Person">
         <constructor-arg ref="Latte" />
+        <property name="favoriteCoffees">
+        <list>
+        	<value>Espresso</value>
+        	<value>Cappuccino</value>
+        	<value>Mocha</value>
+        </list>
+        </property>
     </bean>
+    
+    <!--  <bean id="person3" class="ch03_project_coffee.Person">
+        <constructor-arg ref="Latte" />
+		<constructor-arg value="Seoul" />
+    </bean> -->
     
 </beans>
