@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- EMSInformationService 빈 생성 -->
+	<bean id="eMSInformationService"
+		class="ch04_project_01.ems.member.service.EMSInformationService">
+
+		<!-- info 필드 초기화 -->
+		<property name="info">
+			<value>Education Management System program was developed in 2022.
+			</value>
+		</property>
+
+		<!-- copyRight 필드 초기화 -->
+		<property name="copyRight">
+			<value>COPYRIGHT(c) 2022 EMS CO., LTD. ALL RIGHT RESERVED. CONTACT
+				MASTER FOR MORE INFORMATION.
+			</value>
+		</property>
+
+		<!-- ver 필드 초기화 -->
+		<property name="ver">
+			<value>The version is 1.0</value>
+		</property>
+
+		<!-- sYear 필드 초기화 -->
+		<property name="sYear">
+			<value>2022</value>
+		</property>
+
+		<!-- sMonth 필드 초기화 -->
+		<property name="sMonth">
+			<value>3</value>
+		</property>
+
+		<!-- sDay 필드 초기화 -->
+		<property name="sDay">
+			<value>1</value>
+		</property>
+
+		<!-- eYear 필드 초기화 -->
+		<property name="eYear">
+			<value>2022</value>
+		</property>
+
+		<!-- eMonth 필드 초기화 -->
+		<property name="eMonth">
+			<value>4</value>
+		</property>
+
+		<!-- eDay 필드 초기화 -->
+		<property name="eDay">
+			<value>30</value>
+		</property>
+
+		<!-- developers 필드 초기화 -->
+		<property name="developers">
+			<list>
+				<value>Cheney.</value>
+				<value>Eloy.</value>
+				<value>Jasper.</value>
+				<value>Dillon.</value>
+				<value>Kian.</value>
+			</list>
+		</property>
+
+		<!-- administrators 필드 초기화 -->
+		<property name="administrators">
+			<map>
+				<entry>
+					<key>
+						<value>Cheney</value>
+					</key>
+					<value>cheney@springPjt.org</value>
+				</entry>
+				<entry>
+					<key>
+						<value>Jasper</value>
+					</key>
+					<value>jasper@springPjt.org</value>
+				</entry>
+			</map>
+		</property>
+
+		<!-- dbInfos 필드 초기화 -->
+		<property name="dbInfos">
+			<map>
+				<entry>
+					<key>
+						<value>dev</value>
+					</key>
+					<ref bean="dev_DBConnectionInfoDev" /> <!-- 개발용 데이터베이스 지정 -->
+				</entry>
+				<entry>
+					<key>
+						<value>real</value>
+					</key>
+					<ref bean="real_DBConnectionInfo" /> <!-- 실제 서비스 데이터베이스 지정 -->
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+</beans>
