@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   
+	<bean id="americano" class="ch03_project_coffee.Americano" />
+	<bean id="latte" class="ch03_project_coffee.Latte" />
+
+	<bean id="person1" class="ch03_project_coffee.Person">
+    	<constructor-arg ref="americano" />
+	</bean>
+
+	<bean id="person2" class="ch03_project_coffee.Person">
+   		<constructor-arg ref="latte" />
+	</bean>
+
+</beans>
